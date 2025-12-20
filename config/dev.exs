@@ -29,6 +29,14 @@ config :twitter_clone, TwitterCloneWeb.Endpoint,
     tailwind: {Tailwind, :install_and_run, [:twitter_clone, ~w(--watch)]}
   ]
 
+config :esbuild,
+  path: System.get_env("ESBUILD_PATH"),
+  version: System.get_env("ESBUILD_VERSION")
+
+config :tailwind,
+  path: System.get_env("TAILWINDCSS_PATH"),
+  version: System.get_env("TAILWINDCSS_VERSION")
+
 # ## SSL Support
 #
 # In order to use HTTPS in development, a self-signed
