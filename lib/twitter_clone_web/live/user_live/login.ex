@@ -39,11 +39,12 @@ defmodule TwitterCloneWeb.UserLive.Login do
           :let={f}
           for={@form}
           id="login_form_magic"
+          \
           action={~p"/users/log-in"}
           phx-submit="submit_magic"
         >
           <.input
-            readonly={!!@current_scope}
+            readonly={!!@current_scope.user}
             field={f[:email]}
             type="email"
             label="Email"
@@ -67,7 +68,7 @@ defmodule TwitterCloneWeb.UserLive.Login do
           phx-trigger-action={@trigger_submit}
         >
           <.input
-            readonly={!!@current_scope}
+            readonly={!!@current_scope.user}
             field={f[:email]}
             type="email"
             label="Email"
