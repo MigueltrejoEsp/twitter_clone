@@ -39,7 +39,6 @@ defmodule TwitterCloneWeb.UserLive.Login do
           :let={f}
           for={@form}
           id="login_form_magic"
-          \
           action={~p"/users/log-in"}
           phx-submit="submit_magic"
         >
